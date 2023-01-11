@@ -1,0 +1,29 @@
+<div class="product__body">
+  
+    <h2>Product Details</h2>
+    <div class="products">
+      <table class="table table-striped">
+        <thead>
+          <tr >
+          <td scope="col">Product ID</td>
+          <td scope="col">Product Image</td>
+          <td scope="col">Product Name</td>
+          <td scope="col">Unit</td>
+          <td scope="col">Price</td>
+          <td scope="col">Add</td> 
+        </tr>
+        </thead>
+  
+        <tbody >
+          <tr *ngFor="let product of products">
+          <td>{{product.productID}}</td>
+          <td><img src={{product.productImg}}></td>
+          <td>{{product.productName}}</td>
+          <td>{{product.unit}}</td>
+          <td>{{product.price}}</td>
+          <td><button (click)="addtocart(product)" class="product__btn"><img src="../assets/add.png" width="16" height="16"/></button></td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

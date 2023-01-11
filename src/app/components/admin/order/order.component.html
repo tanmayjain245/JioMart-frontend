@@ -1,0 +1,30 @@
+<p></p>
+<h2>Order Details</h2>
+    <div class="order">
+      <table class="table">
+        <thead>
+          <tr >
+          <td scope="col">Order ID</td>
+          <td scope="col">Order Date</td>
+          <td scope="col">Customer ID</td>
+          <td scope="col">Customer Name</td>
+          <td scope="col">Shipper ID</td>
+          <td scope="col">Products </td>
+          <!-- <td scope="col">Product ID</td>
+          <td scope="col">Quantity</td> -->
+        </tr>
+        </thead>
+
+        <tbody >
+            <tr *ngFor="let o of order">
+            <td>{{o.orderID}}</td>
+            <td>{{o.orderDate}}</td>
+            <td>{{o.customer.customerID}}</td>
+            <td>{{o.customer.customerName}}</td>
+            <td>{{o.shipper.shipperID}}</td>
+            <td>{{o.productlist}}</td>
+            <!-- <td>{{order.productID}}</td>
+            <td>{{order.quantity}}</td> -->
+    </table>
+    </div>
+

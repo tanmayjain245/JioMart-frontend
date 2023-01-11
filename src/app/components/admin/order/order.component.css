@@ -1,0 +1,28 @@
+.order {
+    padding-top: 20px;
+    /* padding-bottom: 20px; */
+    /* padding-left: 20px; */
+    width: 700px;
+    align-items: center;
+    margin: auto;
+    background-color:#009688; 
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+
+thead>tr {
+    color: black;
+    /* text-decoration: underline; */
+}
+
+tbody {
+    color: black;
+}

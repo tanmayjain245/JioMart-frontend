@@ -1,0 +1,71 @@
+<div class="customer__body">
+
+  
+    <h2>Customer Details</h2>
+    
+    <div class="customer">
+      <table class="table table-striped">
+        <thead>
+          <tr >
+          <td scope="col">Customer ID</td>
+          <td scope="col">Customer Name</td>
+          <td scope="col">Address</td>
+          <td scope="col">City</td>
+          <td scope="col">Postal Code</td>
+          <td scope="col">Country</td>
+        </tr>
+        </thead>
+  
+        <tbody >
+          <tr *ngFor="let c of customer">
+          <td>{{c.customerID}}</td>
+          <td>{{c.customerName}}</td>
+          <td>{{c.address}}</td>
+          <td>{{c.city}}</td>
+          <td>{{c.postalCode}}</td>
+          <td>{{c.country}}</td>
+          </tr>
+          <!-- <tr style="text-align: center;">
+            <td colspan="6">
+              <button type="button" class="btn add__products" (click)="changeAddBtnState()">Register Customer</button> </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- <div class="form" *ngIf="addBtnState">
+      <h2>Add Customer</h2>
+      <div class="customer__form">
+        <form (ngSubmit)="saveCustomer()">
+          <div>
+            <label for="customer__name">Customer Name</label>
+            <input type="text" id="product__name" placeholder="Enter Customer name" [(ngModel)]="customerVo.customerName"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="customer__address">Address</label>
+            <input type="text" id="customer__address" placeholder="Enter customer address" [(ngModel)]="customerVo.address"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="customer__city">City</label>
+            <input type="text" id="customer__city" placeholder="Enter customer City" [(ngModel)]="customerVo.city"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="customer__postalCode">postal Code</label>
+            <input type="number" id="customer__postalCodey" placeholder="Enter postal Code" [(ngModel)]="customerVo.postalCode"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="customer__country">Country</label>
+            <input type="text" id="customer__country" placeholder="Enter customer Country" [(ngModel)]="customerVo.country"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form__button">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div> -->

@@ -1,0 +1,37 @@
+
+<div *ngIf="cartlist.length==0; else showCart" class="text-center justify-center items-center">
+  <img src="https://mir-s3-cdn-cf.behance.net/projects/404/95974e121862329.Y3JvcCw5MjIsNzIxLDAsMTM5.png" height="350" width="350" class="pt-5 mt-3 ml-auto mr-auto" />
+  <br>
+  <br>
+  <button routerLink="/viewprod" type="button" class="btn btn-outline-primary">Continue shopping</button>
+</div>
+
+<ng-template #showCart> 
+  <p></p>
+<h2>Cart Details</h2>
+<div class="cart">
+    <table class="table table-striped">
+      <thead>
+        <tr >
+        <td scope="col">Product ID</td>
+        <td scope="col">Product Name</td>
+        <td scope="col">Price</td>
+        <td scope="col">Delete</td>
+      </tr>
+      </thead>
+    <tbody >
+        <tr *ngFor="let cr of cartlist">
+        <td>{{cr.productID}}</td>
+        <td>{{cr.productName}}</td>
+        <td>{{cr.price}}</td>
+        <td><button class="product__btn" (click)="deletefromcart(cr)"><img src="../assets/delete.png" width="16" height="16"/></button></td>
+        </tr>
+        <tr>
+          <td ><h4>Total Price : {{total}}</h4></td>
+          <td colspan="4" style="text-align: right;">
+            <button type="button" class="btn add__order" (click)="placeOrder()">Place Order</button> </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</ng-template>

@@ -1,0 +1,111 @@
+<div class="product__body">
+
+  
+    <h2>Product Details</h2>
+    <!-- <button class="btn btn-success"><a href="http://localhost:4200/product">Admin</a></button> -->
+    <div class="products">
+      <table class="table table-striped">
+        <thead>
+          <tr >
+          <td scope="col">Product ID</td>
+          <td scope="col">Product Image</td>
+          <td scope="col">Product Name</td>
+          <td scope="col">Unit</td>
+          <td scope="col">Price</td>
+          <td scope="col">Delete</td>
+          <td scope="col">Edit</td>
+          <!-- <td scope="col">Add</td>  -->
+        </tr>
+        </thead>
+  
+        <tbody >
+          <tr *ngFor="let product of products">
+          <td>{{product.productID}}</td>
+          <td><img src={{product.productImg}}></td>
+          <td>{{product.productName}}</td>
+          <td>{{product.unit}}</td>
+          <td>{{product.price}}</td>
+          <td><button (click)="deleteProduct(product.productID)" class="product__btn"><img src="../assets/delete.png" width="16" height="16"/></button></td>
+          <td><button (click)="editProduct(product)" (click)="setEditProductID(product.productID)" class="product__btn"><img src="../assets/editing.png" width="16" height="16"/></button></td>
+          <!-- <td><button (click)="addtocart(product)" class="product__btn"><img src="../assets/add.png" width="16" height="16"/></button></td>  -->
+          </tr>
+          <tr style="text-align: center;">
+            <td colspan="7">
+              <button type="button" class="btn add__products" (click)="changeAddBtnState()">Add Products</button> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="form" *ngIf="addBtnState">
+      <h2>Add Product</h2>
+      <div class="product__form">
+        <form (ngSubmit)="saveProduct()">
+          <div>
+            <label for="product__name">Product Name</label>
+            <input type="text" id="product__name" placeholder="Enter product name" [(ngModel)]="productVo.productName"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__unit">Unit</label>
+            <input type="number" id="product__unit" placeholder="Enter units.." [(ngModel)]="productVo.unit"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__price">Price</label>
+            <input type="number" id="product__price" placeholder="Enter price" [(ngModel)]="productVo.price"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__supplier">Supplier ID</label>
+            <input type="number" id="supplier__ID" placeholder="Enter supplier ID" [(ngModel)]="productVo.supplierID"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__image">Product Image</label>
+            <input type="text" id="product__image" placeholder="Enter url" [(ngModel)]="productVo.productImg"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form__button">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <div class="form" *ngIf="editBtnState">
+      <h2>Edit Product</h2>
+      <div class="edit__form">
+        <form (ngSubmit)="updateProduct()">
+          <div>
+            <label for="product__name">Product Name</label>
+            <input type="text" id="product__name" placeholder="Enter product name" [(ngModel)]="productToUpdate.productName"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__unit">Unit</label>
+            <input type="number" id="product__unit" placeholder="Enter units.." [(ngModel)]="productToUpdate.unit"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__price">Price</label>
+            <input type="number" id="product__price" placeholder="Enter price" [(ngModel)]="productToUpdate.price"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__supplier">Supplier ID</label>
+            <input type="number" id="supplier__ID" placeholder="Enter supplier ID" [(ngModel)]="productToUpdate.supplierID"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div>
+            <label for="product__image">Product Image</label>
+            <input type="text" id="product__image" placeholder="Enter url" [(ngModel)]="productToUpdate.productImg"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form__button">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

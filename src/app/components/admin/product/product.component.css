@@ -1,0 +1,128 @@
+.product__body {
+    margin: 30px;
+    padding: 10px;
+}
+
+
+.products {
+    padding-top: 20px;
+    /* padding-bottom: 20px; */
+    /* padding-left: 20px; */
+    width: 1100px;
+    align-items: center;
+    margin: auto;
+    background-color:#009688; 
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+
+thead>tr {
+    color: black;
+    /* text-decoration: underline; */
+}
+
+tbody {
+    color: black;
+}
+
+.product__btn {
+    border: none;
+    background: none;
+    color: white;
+}
+
+.add__products {
+    color:white;
+    background-color: black;
+}
+
+/* .container-btn{
+    height:200px;
+    position:relative;
+    color: green;
+} */
+
+.form h2 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.product__form {
+    margin: auto;
+    width: 600px;
+    background-color:white;
+    color: black;
+    align-items: center;
+    border-radius: 25px;
+    padding: 20px;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+.product__form div {
+    margin: 10px;
+    display: grid;
+    flex-direction: row;
+}
+
+.product__form input {
+    border-radius: 25px;
+    border: 0;
+}
+
+.product__form .form__button {
+    justify-content: center;
+    border: black;
+}
+
+.product__form button {
+    width: 100px;
+    margin-top: 10px;
+    background-color: black;
+    border: 10px;
+    color:white;
+}
+
+.edit__form {
+    margin: auto;
+    width: 600px;
+    background-color:white;
+    color: black;
+    align-items: center;
+    border-radius: 25px;
+    padding: 20px;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+.edit__form div {
+    margin: 10px;
+    display: grid;
+    flex-direction: row;
+}
+
+.edit__form input {
+    border-radius: 25px;
+    border: 0;
+}
+
+.edit__form .form__button {
+    justify-content: center;
+}
+
+.edit__form button {
+    width: 100px;
+    margin-top: 10px;
+    background-color: black;
+    border: 10px;
+    color: white;
+}
